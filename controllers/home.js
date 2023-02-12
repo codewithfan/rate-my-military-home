@@ -1,5 +1,3 @@
-const ItemList = require('../models/ItemList')
-
 module.exports = {
     getIndex : async (req, res) => {
         try {
