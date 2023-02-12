@@ -1,4 +1,4 @@
-# <a target="_blank" href="#">Rate My Military Home</a> 🚀
+# Military Living Ratings 🏠
 
 The goal was to create a full stack web application that allows users to navigate the latest reviews on houses in military bases in the USA.
 
