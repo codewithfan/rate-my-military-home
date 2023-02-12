@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate My Military Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %>    
+    <% } %>
+    <% if (locals.messages.info) { %>
+        <% messages.info.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %>    
+    <% } %>
+    <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit">
+    </form>
+</body>
+</html>
