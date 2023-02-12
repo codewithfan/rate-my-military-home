@@ -5,7 +5,7 @@ const PORT = 8500;
 const mongoose = require("mongoose");
 const passport = require('passport')
 const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
+const MongoStore = require('connect-mongo')
 const flash = require('express-flash')
 const logger = require('morgan')
 
@@ -25,15 +25,15 @@ app.use(express.static('public'))
 app.use(express.json())
 app.use(logger('dev'))
 
-// Sessions
+//Sessions
 app.use(
     session({
       secret: 'keyboard cat',
       resave: false,
       saveUninitialized: false,
-      store: new MongoStore({ mongooseConnection: mongoose.connection }),
+      store: MongoStore.create({ mongoUrl: process.env.DB_CONNECTION}),
     })
-  )
+)
   
 // Passport middleware
 app.use(passport.initialize())
