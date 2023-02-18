@@ -13,6 +13,7 @@ const logger = require('morgan')
 const connectDB = require("./config/database")
 const homeRoutes = require("./routes/home")
 const editRoutes = require("./routes/edit")
+// const ratingRoutes = require("./routes/ratings")
 
 require('dotenv').config({path: './config/.env'})
 
@@ -46,6 +47,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //todo - Set Routes
 app.use('/', homeRoutes)
+// app.use('/ratings', ratingRoutes)
 app.use('/edit', editRoutes)
 
 //todo - Start Server
