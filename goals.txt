@@ -1,0 +1,3 @@
+17FEB23
+Landing page so far is good, clicking login page goes to login page
+Lets change local Auth to Google Auth
